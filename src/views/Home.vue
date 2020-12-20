@@ -16,7 +16,7 @@
             <img class="right-item" src="../assets/font/doc.svg">
           </a>
           <a style="align-self: center;" target="_blank"
-             href="https://gitee.com/hanxt/dongbb">
+             href="https://gitee.com/hanxt/RDBA权限管理系统">
             <img class="right-item" src="../assets/font/github.svg">
           </a>
           <el-dropdown>

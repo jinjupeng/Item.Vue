@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <el-form class="login-form">
-            <h3 class="title">DongBB</h3>
+            <h3 class="title">RDBA权限管理系统</h3>
 
             <el-alert :title="loginForm.errorMsg" type="error" v-show="loginForm.errorVisible">
             </el-alert>
@@ -37,7 +37,7 @@
           title="扫描二维码"
           :visible.sync="dialogVisible"
           width="20%">
-          <span>关注公众号，回复'dongbb'，字母哥所有资源均在此首发</span>
+          <span>关注公众号，回复'RDBA权限管理系统'，字母哥所有资源均在此首发</span>
           <img src="../assets/img/wx-zimug-ketang.png" style="height: 200px;">
           <span slot="footer" class="dialog-footer">
             <el-button type="primary" @click="dialogVisible = false">关闭</el-button>

@@ -1,5 +1,5 @@
 <template>
-  <iframe :src="`${publicPath}dongbb_1.0.0.html`"
+  <iframe :src="`${publicPath}RDBA权限管理系统_1.0.0.html`"
           class="db-document-frame"/>
 </template>
 

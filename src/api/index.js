@@ -1,3 +1,3 @@
 import HttpRequest from '@/lib/request'
 
-export const jwtServerInstance = new HttpRequest("http://123.56.169.21:8201")
+export const jwtServerInstance = new HttpRequest("http://127.0.0.1:5000")

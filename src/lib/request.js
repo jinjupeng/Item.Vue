@@ -2,6 +2,11 @@ import axios from 'axios'
 import {getJwtToken} from "./utils";
 import {Message} from 'element-ui'
 
+
+const service = axios.create({
+    baseURL: '/api',
+    timeout: 5000
+});
 class HttpRequest {
     //构造函数
     constructor(baseUrl) {
@@ -22,7 +27,7 @@ class HttpRequest {
     //创建并返回axios实例，options参数为创建实例时传递的个性化参数
     request(options) {
         const instance = axios.create()
-        instance.interceptors.response.use(
+        service.interceptors.response.use(
             response => {
                 const res = response.data;
                 if (!res.isok) {
@@ -83,7 +88,7 @@ class HttpRequest {
             }
         )
         // request拦截器
-        instance.interceptors.request.use(
+        service.interceptors.request.use(
             config => {
                 //认证请求不需要携带令牌
                 if (config.url !== "/authentication") {
