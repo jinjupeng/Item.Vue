@@ -16,7 +16,7 @@ class HttpRequest {
     //针对当前axios实例的默认配置
     initConfig() {
         const config = {
-            baseURL: this.baseUrl,
+            baseURL: this.baseUrl + "/api",
             headers: {
                 //
             }

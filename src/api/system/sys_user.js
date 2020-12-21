@@ -5,7 +5,7 @@ import qs from	'qs'
 //JWT登录认证接口
 export const login = (userName,passWord) => {
   return jwtServerInstance.request({
-    url:'/authentication',
+    url:'/JwtAuth/authentication',
     method:'post',
     data:{
       username: userName,
@@ -16,7 +16,7 @@ export const login = (userName,passWord) => {
 //JWT令牌刷新接口
 export const refreshToken = () => {
   return jwtServerInstance.request({
-    url:'/refreshtoken',
+    url:'/JwtAuth/refreshtoken',
     method:'get'
   })
 }
