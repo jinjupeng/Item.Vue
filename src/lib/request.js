@@ -27,7 +27,7 @@ class HttpRequest {
     //创建并返回axios实例，options参数为创建实例时传递的个性化参数
     request(options) {
         const instance = axios.create()
-        service.interceptors.response.use(
+        instance.interceptors.response.use(
             response => {
                 const res = response.data;
                 if (!res.isok) {
@@ -88,10 +88,10 @@ class HttpRequest {
             }
         )
         // request拦截器
-        service.interceptors.request.use(
+        instance.interceptors.request.use(
             config => {
                 //认证请求不需要携带令牌
-                if (config.url !== "/authentication") {
+                if (config.url !== "/JwtAuth/authentication") {
                     // 让每个请求携带token
                     config.headers['Authorization'] = getJwtToken();
                 }
