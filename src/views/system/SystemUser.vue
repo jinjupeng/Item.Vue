@@ -124,8 +124,6 @@
           </el-pagination>
         </el-card>
 
-
-
         <el-dialog :title="dialogTitle" :visible.sync="dialogFormVisible"
                    :before-close="beforeDialogClose">
           <el-alert
@@ -174,10 +172,6 @@
             <el-button @click="handleCloseDialog" size="mini">取 消</el-button>
           </div>
         </el-dialog>
-
-
-
-
         <el-dialog :title="roleDialogTitle" :visible.sync="roleDialogVisible">
           <el-button type="primary"
                      size="small"
@@ -282,11 +276,14 @@
     },
     computed:{
       dialogAlertInfo(){
+        return "xx"
+        /*
         return "新增用户默认初始密码:" +
           this.$store.getters.getSysConfigItem("user.init.password") +
           ",会在用户登陆后提示用户自行修改。" +
           "如果您希望为用户修改密码，" +
           "请使用密码重置功能"
+          */
       }
     },
     methods: {
