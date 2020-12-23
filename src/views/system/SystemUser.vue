@@ -276,14 +276,12 @@
     },
     computed:{
       dialogAlertInfo(){
-        return "xx"
-        /*
         return "新增用户默认初始密码:" +
           this.$store.getters.getSysConfigItem("user.init.password") +
           ",会在用户登陆后提示用户自行修改。" +
           "如果您希望为用户修改密码，" +
           "请使用密码重置功能"
-          */
+          
       }
     },
     methods: {
@@ -399,7 +397,7 @@
           {username:"",phone:"",enabled:"",email:"",orgId:null,timeRange: ["",""]}
           ,{pageNum: 1, pageSize: 20,}
         ),
-        getOrgTree({status:false,name:""})])
+        getOrgTree({status:true,name:""})])
       .then(axios.spread(function (res1, res2) {
         // 两个请求都执行完成后，进入该函数
         next(vm => {vm.setData(res1);vm.setOrgData(res2)})

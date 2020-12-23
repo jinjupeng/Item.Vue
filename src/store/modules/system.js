@@ -45,6 +45,7 @@ const mutations = {
 }
 const getters = {
   getSysConfigItem: (state) => (paramKey) => {
+    //console.log(paramKey) // user.init.password
     return state.sysconfig
       .find(item => item.paramKey === paramKey)
       .paramValue

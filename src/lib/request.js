@@ -3,10 +3,6 @@ import {getJwtToken} from "./utils";
 import {Message} from 'element-ui'
 
 
-const service = axios.create({
-    baseURL: '/api',
-    timeout: 5000
-});
 class HttpRequest {
     //构造函数
     constructor(baseUrl) {
