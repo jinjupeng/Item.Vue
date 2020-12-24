@@ -397,7 +397,7 @@
           {username:"",phone:"",enabled:"",email:"",orgId:null,timeRange: ["",""]}
           ,{pageNum: 1, pageSize: 20,}
         ),
-        getOrgTree({status:true,name:""})])
+        getOrgTree({status:false,name:""})])
       .then(axios.spread(function (res1, res2) {
         // 两个请求都执行完成后，进入该函数
         next(vm => {vm.setData(res1);vm.setOrgData(res2)})
