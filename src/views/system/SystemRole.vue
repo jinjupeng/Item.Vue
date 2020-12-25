@@ -137,7 +137,7 @@
         dialogFormVisible: false,
         dialogTitle:"",
         dialogForm: {
-          id: null,
+          id: '',
           roleName: '',
           roleCode: '',
           roleDesc: '',

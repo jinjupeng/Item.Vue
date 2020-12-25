@@ -67,7 +67,7 @@ export const addUser = (userForm) => {
   return jwtServerInstance.request({
     url:'/sysuser/add',
     method:'post',
-    data:JSON.stringify(userForm)
+    data:userForm
   })
 }
 
