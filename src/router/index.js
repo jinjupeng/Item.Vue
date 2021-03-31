@@ -18,6 +18,8 @@ const router = new VueRouter({
   routes: [...systemRoutes]
 })
 
+// 路由守卫
+// to:表示将要访问的路径，from：表示从哪里来，next：是下一个要做的操作；next('/login')强制跳转login页
 router.beforeEach((to,from,next) => {
   if(to.name !== 'login'){
     NProgress.start()
