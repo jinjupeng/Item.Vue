@@ -12,14 +12,14 @@
           <a
             style="align-self: center"
             target="_blank"
-            href="https://www.kancloud.cn/hanxt/vue-spring/content"
+            href="https://github.com/jinjupeng/Item.ApiServer"
           >
             <img class="right-item" src="../assets/font/doc.svg" />
           </a>
           <a
             style="align-self: center"
             target="_blank"
-            href="https://gitee.com/hanxt/RDBA权限管理系统"
+            href="https://github.com/jinjupeng/Item.Vue"
           >
             <img class="right-item" src="../assets/font/github.svg" />
           </a>

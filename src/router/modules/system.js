@@ -1,6 +1,5 @@
 import Login from '@/views/Login.vue'
 import FirstPage from '@/views/system/FirstPage.vue'
-import toolsRouter from '@/router/modules/tools'
 
 //菜单项级别的前端路由
 const menuRouter = [
@@ -63,8 +62,7 @@ export default [
     //name: 'home',
     component: () => import( '@/views/Home.vue'),
     children:[
-        ...menuRouter,
-        ...toolsRouter
+        ...menuRouter
     ]
   }
 ]

@@ -1,6 +1,6 @@
 <template>
     <div style="margin-top: 150px;text-align: center;">
-      <h2>不想再首页加太多内容，干干净净，你用起来也方便。注意：系统每逢小时整点会自动清理数据！</h2>
+      <h2>程序猿的小站首页</h2>
     </div>
 </template>
 

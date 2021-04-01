@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <el-form class="login-form">
-            <h3 class="title">RDBA权限管理系统</h3>
+            <h1 class="title">程序猿的小站</h1>
 
             <el-alert :title="loginForm.errorMsg" type="error" v-show="loginForm.errorVisible">
             </el-alert>
@@ -25,27 +25,16 @@
                   </el-button>
                 </el-col>
                 <el-col :span="12">
-                  <el-button @click="dialogVisible = true" size="medium" type="success" style="width:100%;">
-                    <span>获取密码</span>
+                  <el-button @click="userpwdReset" size="medium" type="success" style="width:100%;">
+                    <span>重 置</span>
                   </el-button>
                 </el-col>
               </el-row>
             </el-form-item>
-
         </el-form>
-        <el-dialog
-          title="扫描二维码"
-          :visible.sync="dialogVisible"
-          width="20%">
-          <span>关注公众号，回复'RDBA权限管理系统'，字母哥所有资源均在此首发</span>
-          <img src="../assets/img/wx-zimug-ketang.png" style="height: 200px;">
-          <span slot="footer" class="dialog-footer">
-            <el-button type="primary" @click="dialogVisible = false">关闭</el-button>
-          </span>
-        </el-dialog>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" class="beian">豫ICP备2021006708号</a>
     </div>
-
-
 </template>
 
 <script>
@@ -60,8 +49,7 @@
                     password: "",
                     errorMsg:"",
                     errorVisible: false
-                },
-                dialogVisible: false
+                }
             };
         },
         methods:{
@@ -78,6 +66,10 @@
             },
             getPassword(){
 
+            },
+            userpwdReset(){
+                this.loginForm.username = ""
+                this.loginForm.password = ""
             }
         }
     }
@@ -104,6 +96,21 @@
                 height: 38px;
             }
         }
-
+    }
+    .title{
+        text-align:center;
+    }
+    .beian{
+        position: absolute;
+        bottom: 15px;
+        font-weight: 300;
+        cursor: pointer;
+        text-transform: uppercase;
+        float:none;
+        text-align: center;
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
     }
 </style>
