@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  web:
+    container_name: Item.Api
+    restart: always # 重启策略: 容器退出时总是重启容器
+    build:
+      context: ./   # 指定设定上下文根目录，然后以该目录为准指定Dockerfile
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000  # 映射端口
