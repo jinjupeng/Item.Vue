@@ -7,4 +7,4 @@ services:
       context: ./   # 指定设定上下文根目录，然后以该目录为准指定Dockerfile
       dockerfile: Dockerfile
     ports:
-      - 8000:8000  # 映射端口
+      - 443:443  # 映射端口

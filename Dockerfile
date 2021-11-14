@@ -34,12 +34,14 @@ FROM nginx:stable-alpine as production-stage
 
 # 把主机的nginx.conf文件复制到nginx容器的/etc/nginx文件夹下
 COPY ./nginx/nginx.conf /etc/nginx/
+COPY ./cert/localhost.pem /etc/ssl/certs/localhost.pem
+COPY ./cert/localhost-key.pem /etc/ssl/private/localhost-key.pem
 
 # 拷贝前端vue项目打包后生成的文件到nginx下运行
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 
-# 暴露8000端口
-EXPOSE 8000
+# 暴露443端口
+EXPOSE 443
 
 # 注：CMD不同于RUN，CMD用于指定在容器启动时所要执行的命令，而RUN用于指定镜像构建时所要执行的命令。
 #    RUN指令创建的中间镜像会被缓存，并会在下次构建中使用。如果不想使用这些缓存镜像，可以在构建时指定--no-cache参数，如：docker build --no-cache
